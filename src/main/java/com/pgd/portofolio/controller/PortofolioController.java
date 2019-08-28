@@ -1,5 +1,6 @@
 package com.pgd.portofolio.controller;
 
+import java.util.HashMap;
 import java.util.List;
 
 import javax.validation.Valid;
@@ -33,7 +34,7 @@ public class PortofolioController {
 		ResponseService res = new ResponseService();
 		try {
 // 			List<TblTabungan> tab = repoTab.findByNorek(req.getNorek());
-            Hashmap<String, String> hMap = new Hashmap<String, String>();
+            HashMap<String, String> hMap = new HashMap<String, String>();
             hMap.put("norek", req.getNorek());
 			Gson gson = new GsonBuilder().setDateFormat("yyyy-MM-dd").create();
 			res.setData(gson.toJson(hMap));
